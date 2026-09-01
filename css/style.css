@@ -298,3 +298,62 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+/* ---------------------------------------------------- local do treino */
+.local {
+  background: linear-gradient(155deg, var(--panel), var(--bg-2));
+  border: 1px solid var(--line-soft); border-radius: var(--radius);
+  padding: 13px 15px 14px; margin-bottom: 18px; box-shadow: var(--shadow);
+}
+.local label {
+  display: block; font-family: var(--font-mono); font-size: 9.5px;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 7px;
+}
+.local input {
+  width: 100%; background: var(--bg); border: 1px solid var(--line-soft); color: var(--ink);
+  font-family: var(--font-body); font-size: 15px; padding: 11px 12px; border-radius: var(--radius-sm);
+}
+.local input:focus { outline: none; border-color: var(--accent); }
+.local input::placeholder { color: var(--ink-3); }
+
+/* ---------------------------------------------------- grafico */
+.chart-box {
+  background: linear-gradient(155deg, var(--panel), var(--bg-2));
+  border: 1px solid var(--line-soft); border-radius: var(--radius);
+  padding: 14px 12px 10px; box-shadow: var(--shadow);
+}
+.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.g-grid { stroke: var(--line-soft); stroke-width: 1; }
+.g-tick { fill: var(--ink-3); font-family: var(--font-mono); font-size: 8.5px; }
+.g-line { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.g-area { fill: var(--accent); opacity: .11; stroke: none; }
+.g-dot { fill: var(--bg-2); stroke: var(--accent); stroke-width: 2; cursor: pointer; }
+.g-dot.on { fill: var(--accent); }
+.g-dot.sel { fill: var(--cyan); stroke: var(--cyan); r: 5.5; }
+.g-lbl { fill: var(--ink); font-family: var(--font-mono); font-size: 10px; font-weight: 500; }
+.g-cap {
+  font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-3);
+  margin: 2px 0 0; padding: 0 4px; text-align: center;
+}
+
+/* ---------------------------------------------------- sessoes */
+.hist-ex {
+  background: linear-gradient(155deg, var(--panel), var(--bg-2));
+  border: 1px solid var(--line-soft); border-radius: var(--radius);
+  padding: 6px 14px; box-shadow: var(--shadow);
+}
+.hist-ex .hist-line {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  padding: 10px 0; border-bottom: 1px solid var(--line-soft);
+}
+.hist-ex .hist-line:last-child { border-bottom: none; }
+.hist-line .d { color: var(--ink-3); flex: none; width: 66px; }
+.hist-line .sets-txt {
+  font-family: var(--font-mono); font-size: 12px; color: var(--ink);
+  font-variant-numeric: tabular-nums; flex: 1 1 auto; min-width: 0;
+}
+.loc-tag {
+  font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .05em;
+  color: var(--blue); border: 1px solid var(--line); border-radius: 999px;
+  padding: 3px 8px; background: rgba(77,124,255,.09); flex: none;
+}
