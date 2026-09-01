@@ -278,35 +278,35 @@ const PROGRAM = {
       brief: "Use quando a semana apertar e você só tiver um dia de superior. Um estímulo pesado por grupo, mais isoladores.",
       exercises: [
         {
-          id: "uw1", name: "Pulldown pegada aberta pronada",
+          id: "uw1", g: "Costas", name: "Pulldown pegada aberta pronada",
           sets: 4, repsMin: 8, repsMax: 10, rir: 1, rest: 120, inc: 5,
           cue: "Abre a sessão pelo ponto mais fraco: largura de dorsal.",
           tech: null,
           alts: ["Barra fixa assistida", "Pulldown convergente unilateral"]
         },
         {
-          id: "uw2", name: "Supino inclinado com halteres",
+          id: "uw2", g: "Peito", name: "Supino inclinado com halteres",
           sets: 4, repsMin: 8, repsMax: 10, rir: 1, rest: 120, inc: 2.5,
           cue: "Banco em 30 graus. Porção clavicular.",
           tech: null,
           alts: ["Supino inclinado no Smith", "Press inclinado na máquina"]
         },
         {
-          id: "uw3", name: "Remada Cavalinho pegada neutra",
+          id: "uw3", g: "Costas", name: "Remada Cavalinho pegada neutra",
           sets: 3, repsMin: 10, repsMax: 12, rir: 1, rest: 90, inc: 5,
           cue: "Densidade de costas com pausa na contração.",
           tech: null,
           alts: ["Remada na máquina peito apoiado", "Remada baixa neutra"]
         },
         {
-          id: "uw4", name: "Elevação lateral no cabo unilateral",
+          id: "uw4", g: "Ombro", name: "Elevação lateral no cabo unilateral",
           sets: 4, repsMin: 12, repsMax: 15, rir: 0, rest: 60, inc: 2.5,
           cue: "Sem impulso. Tensão constante.",
           tech: null,
           alts: ["Elevação lateral com halteres", "Lateral na máquina"]
         },
         {
-          id: "uw5", name: "Bi-set: Peck deck + Crucifixo inverso",
+          id: "uw5", g: "Peito", name: "Bi-set: Peck deck + Crucifixo inverso",
           sets: 3, repsMin: 12, repsMax: 15, rir: 0, rest: 60, inc: 5,
           cue: "Emenda os dois sem descanso. Fecha peito e deltoide posterior no mesmo bloco.",
           tech: "myo-reps",
@@ -315,6 +315,74 @@ const PROGRAM = {
       ]
     },
 
+
+    /* ---------------------------------------------------- PERNA A */
+    {
+      id: "perna-a",
+      group: "Perna",
+      title: "Perna A — Quadríceps",
+      focus: "Quadríceps, com ênfase no vasto lateral e no reto femoral",
+      duration: 50,
+      priority: false,
+      brief: "Agachamento primeiro enquanto há força. Extensora no fim, porque fadiga o joelho e atrapalha o resto.",
+      exercises: [
+        { id: "pna1", name: "Agachamento livre com barra", sets: 4, repsMin: 6, repsMax: 8, rir: 2, rest: 180, inc: 5,
+          cue: "Desce até a coxa passar da paralela, joelho acompanhando a linha do pé. Core travado, sem soltar o quadril no fundo.",
+          tech: null, alts: ["Agachamento no Smith", "Hack machine", "Agachamento goblet com halter"] },
+        { id: "pna2", name: "Leg press 45 graus", sets: 4, repsMin: 10, repsMax: 12, rir: 1, rest: 120, inc: 10,
+          cue: "Pés na largura do quadril e na parte baixa da plataforma para carregar o quadríceps. Não deixe o lombar sair do encosto.",
+          tech: null, alts: ["Hack machine", "Agachamento na máquina Smith", "Prensa horizontal"] },
+        { id: "pna3", name: "Passada com halteres", sets: 3, repsMin: 10, repsMax: 12, rir: 1, rest: 90, inc: 2.5,
+          cue: "Passo longo carrega glúteo, passo curto carrega quadríceps. Aqui use passo curto e tronco reto.",
+          tech: null, alts: ["Búlgaro com halteres", "Afundo estático no Smith", "Step-up no banco"] },
+        { id: "pna4", name: "Cadeira extensora", sets: 3, repsMin: 12, repsMax: 15, rir: 0, rest: 75, inc: 5,
+          cue: "Pausa de 1s no topo. Última série em drop-set.",
+          tech: "drop-set", alts: ["Extensora unilateral", "Sissy squat"] },
+        { id: "pna5", name: "Panturrilha em pé", sets: 4, repsMin: 12, repsMax: 15, rir: 0, rest: 60, inc: 5,
+          cue: "Amplitude total, 2s de alongamento embaixo e pausa de 1s no topo. Panturrilha só responde a range completo.",
+          tech: null, alts: ["Panturrilha no leg press", "Panturrilha no Smith"] }
+      ]
+    },
+
+    /* ---------------------------------------------------- PERNA B */
+    {
+      id: "perna-b",
+      group: "Perna",
+      title: "Perna B — Posterior e glúteo",
+      focus: "Isquiotibiais e glúteo máximo, com foco na cadeia posterior",
+      duration: 50,
+      priority: false,
+      brief: "Cadeia posterior costuma ser o ponto fraco de quem prioriza superior. Terra romeno primeiro, com controle na excêntrica.",
+      exercises: [
+        { id: "pnb1", name: "Levantamento terra romeno com barra", sets: 4, repsMin: 8, repsMax: 10, rir: 2, rest: 150, inc: 5,
+          cue: "Joelho levemente flexionado e fixo. Empurre o quadril para trás até sentir o alongamento do posterior, sem arredondar a lombar.",
+          tech: null, alts: ["Terra romeno com halteres", "Terra romeno no Smith", "Good morning com barra"] },
+        { id: "pnb2", name: "Mesa flexora deitada", sets: 4, repsMin: 10, repsMax: 12, rir: 1, rest: 90, inc: 5,
+          cue: "Quadril colado no banco. Excêntrica de 3s, que é onde o isquiotibial mais responde.",
+          tech: null, alts: ["Cadeira flexora sentada", "Flexora unilateral em pé", "Nordic curl assistido"] },
+        { id: "pnb3", name: "Elevação pélvica com barra (hip thrust)", sets: 3, repsMin: 10, repsMax: 12, rir: 1, rest: 120, inc: 5,
+          cue: "Queixo para baixo, costela fechada. Pausa de 2s na contração máxima, sem hiperestender a lombar.",
+          tech: null, alts: ["Hip thrust na máquina", "Ponte de glúteo com barra", "Glúteo no cabo"] },
+        { id: "pnb4", name: "Cadeira abdutora", sets: 3, repsMin: 15, repsMax: 20, rir: 0, rest: 60, inc: 5,
+          cue: "Tronco levemente inclinado à frente para pegar o glúteo médio, que é o que dá o contorno lateral do quadril.",
+          tech: null, alts: ["Abdução no cabo", "Caminhada lateral com elástico"] },
+        { id: "pnb5", name: "Panturrilha sentado", sets: 4, repsMin: 15, repsMax: 20, rir: 0, rest: 60, inc: 5,
+          cue: "Joelho flexionado isola o sóleo, que é o músculo que dá volume visto de lado.",
+          tech: "rest-pause", alts: ["Panturrilha no leg press com joelho flexionado", "Panturrilha unilateral sentado"] }
+      ]
+    },
+
+    /* ---------------------------------------------------- LIVRE */
+    {
+      id: "livre",
+      group: "Livre",
+      title: "Treino livre",
+      focus: "Sessão montada por você, com exercícios avulsos",
+      duration: 0,
+      priority: false,
+      brief: "Use para treino fora do programa, academia diferente ou teste de exercício novo. Adicione os exercícios pelo botão abaixo.",
+      exercises: []
+    },
     /* ---------------------------------------------------- BRACO */
     {
       id: "braco",
@@ -372,7 +440,22 @@ const PROGRAM = {
 };
 
 const SPLITS = [
-  { name: "5 dias", days: ["costas-a", "peito-a", "ombro", "costas-b", "peito-b"] },
-  { name: "6 dias", days: ["peito-a", "costas-a", "ombro", "peito-b", "costas-b", "braco"] },
-  { name: "3 dias (semana apertada)", days: ["upper-wp", "costas-a", "ombro"] }
+  { name: "5 dias", days: ["costas-a", "peito-a", "ombro", "perna-a", "costas-b"] },
+  { name: "6 dias", days: ["peito-a", "costas-a", "perna-a", "ombro", "costas-b", "perna-b"] },
+  { name: "3 dias (semana apertada)", days: ["upper-wp", "perna-a", "ombro"] }
+];
+
+/* Séries efetivas por grupo por semana — faixa alvo para hipertrofia */
+const ALVO = {
+  "Costas": [14, 20], "Peito": [12, 18], "Ombro": [12, 20],
+  "Braço": [8, 14], "Perna": [12, 18], "Livre": [0, 0]
+};
+
+const TECNICAS = [
+  { k: "", n: "Normal", s: "—" },
+  { k: "myo", n: "Myo-reps", s: "MYO" },
+  { k: "clu", n: "Cluster", s: "CLU" },
+  { k: "rp", n: "Rest-pause", s: "RP" },
+  { k: "bo", n: "Back-off", s: "BO" },
+  { k: "drop", n: "Drop-set", s: "DROP" }
 ];
