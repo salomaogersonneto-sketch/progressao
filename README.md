@@ -6,12 +6,18 @@ Registro e progressão de carga, com histórico completo por exercício e local 
 
 ## O que ele faz
 
-- **7 treinos prontos**: Costas A (largura), Costas B (espessura), Peito A (porção superior), Peito B (volume e alongamento), Ombro (efeito 3D), Upper Weak Points (sessão combinada) e Braço.
+- **10 treinos prontos**: Costas A (largura), Costas B (espessura), Peito A (porção superior), Peito B (volume e alongamento), Ombro (efeito 3D), Upper Weak Points (sessão combinada), Perna A (quadríceps), Perna B (posterior e glúteo), Braço e Treino livre.
 - **Registro de cargas e reps** série a série, com a última sessão sempre visível como referência.
 - **Progressão dupla automática**: quando você bate o topo da faixa de reps em todas as séries, o app avisa a carga da próxima sessão.
 - **Biblioteca de substituições**: 2 a 3 alternativas por exercício, para máquina ocupada ou execução que você ainda não domina. A troca fica salva.
 - **Histórico completo** por exercício: todas as sessões salvas, sem corte, com gráfico de carga máxima por sessão, recorde, variação percentual no período e volume total.
 - **Local de treino** registrado em cada sessão, com sugestão dos locais já usados. Útil para comparar carga entre academias diferentes.
+- **Técnica por série**: myo-reps, cluster, rest-pause, back-off e drop-set, marcadas série a série e preservadas no histórico.
+- **Timer de descanso** disparado ao marcar a série concluída, já com o tempo prescrito do exercício, com botão de mais 15 segundos e de pular.
+- **Volume semanal por grupo muscular**: séries efetivas dos últimos 7 dias contra a faixa alvo de hipertrofia, com comparação com a semana anterior.
+- **Detecção de estagnação**: 3 sessões sem ganho de carga nem de reps disparam alerta com recomendação de deload ou troca.
+- **Editar e apagar sessão** direto na tela de evolução do exercício.
+- **Exercício avulso**: adicione qualquer exercício a qualquer treino, definindo grupo, séries, faixa de reps, descanso e incremento.
 - **Offline first**: service worker com cache do app inteiro. Depois do primeiro acesso, funciona sem internet na academia.
 
 ## Como instalar no celular
