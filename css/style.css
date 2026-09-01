@@ -197,7 +197,7 @@ body::after {
 /* ---------------------------------------------------- set grid */
 .sets { padding: 0 15px 14px; }
 .sets-head, .set-row {
-  display: grid; grid-template-columns: 34px 1fr 1fr 40px; gap: 8px; align-items: center;
+  display: grid; grid-template-columns: 24px 1fr 1fr 46px 34px; gap: 6px; align-items: center;
 }
 .sets-head {
   font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .13em;
@@ -357,3 +357,117 @@ body::after {
   color: var(--blue); border: 1px solid var(--line); border-radius: 999px;
   padding: 3px 8px; background: rgba(77,124,255,.09); flex: none;
 }
+
+/* ---------------------------------------------------- tecnica por serie */
+.tec {
+  height: 38px; border-radius: var(--radius-sm);
+  border: 1px solid var(--line-soft); background: transparent; color: var(--ink-3);
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .04em; cursor: pointer; padding: 0 2px;
+}
+.tec.on { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+.tec-tag {
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: .06em;
+  color: var(--accent); border: 1px solid var(--accent-2); border-radius: 4px;
+  padding: 1px 4px; font-weight: 400; background: var(--accent-dim);
+}
+
+/* ---------------------------------------------------- alertas */
+.card.alert::before { background: linear-gradient(180deg, var(--amber), #8a5a00); }
+.tag.warn { border-color: #7a5510; color: var(--amber); background: rgba(255,176,32,.1); }
+.suggest.stall { border-style: solid; border-color: #7a5510; background: rgba(255,176,32,.1); color: var(--amber); }
+
+/* ---------------------------------------------------- volume semanal */
+.vol-row { padding: 12px 4px 14px; border-bottom: 1px solid var(--line-soft); }
+.vol-row:last-child { border-bottom: none; }
+.vol-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.vol-g { font-family: var(--font-display); font-weight: 700; font-size: 15px; letter-spacing: -.01em; }
+.vol-n { font-family: var(--font-mono); font-size: 15px; font-variant-numeric: tabular-nums; }
+.vol-n small { font-size: 10px; color: var(--ink-3); }
+.vol-track {
+  position: relative; height: 12px; border-radius: 4px;
+  background: var(--bg); border: 1px solid var(--line-soft); overflow: hidden;
+}
+.vol-fill { position: absolute; inset: 0 auto 0 0; border-radius: 3px; background: var(--accent); }
+.vol-fill.zero { background: var(--line); }
+.vol-fill.baixo { background: var(--amber); }
+.vol-fill.ok { background: var(--cyan); }
+.vol-fill.alto { background: var(--accent); }
+.vol-band {
+  position: absolute; top: 0; bottom: 0;
+  border-left: 1px dashed var(--ink-3); border-right: 1px dashed var(--ink-3);
+  background: rgba(255,255,255,.05);
+}
+.vol-foot {
+  display: flex; justify-content: space-between; gap: 10px; margin-top: 7px;
+  font-family: var(--font-mono); font-size: 9.5px; color: var(--ink-3); flex-wrap: wrap;
+}
+.vol-foot .st { text-transform: uppercase; letter-spacing: .1em; }
+.vol-foot .st.baixo, .vol-foot .st.zero { color: var(--amber); }
+.vol-foot .st.ok { color: var(--cyan); }
+.vol-foot .st.alto { color: var(--accent); }
+
+/* ---------------------------------------------------- timer */
+.timer {
+  position: fixed; left: 12px; right: 12px; bottom: 84px; z-index: 40;
+  display: flex; align-items: center; gap: 10px;
+  background: var(--panel-2); border: 1px solid var(--accent-2);
+  border-radius: var(--radius); padding: 11px 13px;
+  box-shadow: 0 14px 34px -16px #000; max-width: 700px; margin: 0 auto;
+  animation: rise .28s cubic-bezier(.22,1,.36,1) backwards;
+}
+.timer.fim { border-color: var(--cyan); }
+.t-lbl { font-size: 12px; color: var(--ink-2); flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.t-time {
+  font-family: var(--font-mono); font-size: 19px; font-weight: 500; color: var(--ink);
+  font-variant-numeric: tabular-nums; letter-spacing: -.02em;
+}
+.timer.fim .t-time { color: var(--cyan); }
+.t-btn {
+  font-family: var(--font-mono); font-size: 10.5px; background: transparent;
+  border: 1px solid var(--line); color: var(--ink-2); padding: 6px 9px;
+  border-radius: 7px; cursor: pointer; flex: none;
+}
+
+/* ---------------------------------------------------- bottom sheet */
+.sheet { position: fixed; inset: 0; z-index: 60; pointer-events: none; }
+.sheet.open { pointer-events: auto; }
+.sheet-bg {
+  position: absolute; inset: 0; background: rgba(3,6,15,.72);
+  opacity: 0; transition: opacity .2s ease;
+}
+.sheet.open .sheet-bg { opacity: 1; }
+.sheet-in {
+  position: absolute; left: 0; right: 0; bottom: 0; max-height: 86vh; overflow-y: auto;
+  background: var(--bg-2); border-top: 1px solid var(--line);
+  border-radius: 18px 18px 0 0; padding: 16px 16px calc(22px + env(safe-area-inset-bottom));
+  transform: translateY(100%); transition: transform .24s cubic-bezier(.22,1,.36,1);
+  max-width: 720px; margin: 0 auto;
+}
+.sheet.open .sheet-in { transform: none; }
+.sheet-h {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  font-family: var(--font-display); font-weight: 700; font-size: 17px; margin-bottom: 14px;
+}
+
+/* ---------------------------------------------------- formulario */
+.form label {
+  display: block; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--ink-3); margin: 12px 0 6px;
+}
+.form input, .form select {
+  width: 100%; background: var(--bg); border: 1px solid var(--line-soft); color: var(--ink);
+  font-family: var(--font-body); font-size: 15px; padding: 11px 12px; border-radius: var(--radius-sm);
+}
+.form input:focus, .form select:focus { outline: none; border-color: var(--accent); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+.form-row:has(div:nth-child(2):last-child) { grid-template-columns: 1fr 1fr; }
+
+.add-ex {
+  width: 100%; background: transparent; border: 1px dashed var(--line);
+  color: var(--ink-2); font-family: var(--font-mono); font-size: 12px;
+  padding: 14px; border-radius: var(--radius); cursor: pointer; margin-bottom: 10px;
+}
+.add-ex:active { border-color: var(--accent); color: var(--accent); }
+
+.mini.danger { border-color: #7a2140; color: #ff5c7a; }
+.row-tools { display: flex; gap: 6px; margin-left: auto; }
