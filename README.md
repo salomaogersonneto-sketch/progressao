@@ -2,7 +2,7 @@
 
 PWA de treino de hipertrofia com foco nos pontos fracos: **costas (largura), ombro (deltoide lateral e posterior) e peito (porção superior)**.
 
-Registro e progressão de carga. Roda offline no celular, salva as cargas localmente e sugere quando subir o peso.
+Registro e progressão de carga, com histórico completo por exercício e local de treino. Roda offline no celular e salva tudo no próprio aparelho.
 
 ## O que ele faz
 
@@ -10,7 +10,8 @@ Registro e progressão de carga. Roda offline no celular, salva as cargas localm
 - **Registro de cargas e reps** série a série, com a última sessão sempre visível como referência.
 - **Progressão dupla automática**: quando você bate o topo da faixa de reps em todas as séries, o app avisa a carga da próxima sessão.
 - **Biblioteca de substituições**: 2 a 3 alternativas por exercício, para máquina ocupada ou execução que você ainda não domina. A troca fica salva.
-- **Histórico** por exercício, últimas 6 sessões.
+- **Histórico completo** por exercício: todas as sessões salvas, sem corte, com gráfico de carga máxima por sessão, recorde, variação percentual no período e volume total.
+- **Local de treino** registrado em cada sessão, com sugestão dos locais já usados. Útil para comparar carga entre academias diferentes.
 - **Offline first**: service worker com cache do app inteiro. Depois do primeiro acesso, funciona sem internet na academia.
 
 ## Como instalar no celular

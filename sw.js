@@ -1,5 +1,5 @@
 /* Service worker — cache offline do app shell */
-const CACHE = "progressao-v1";
+const CACHE = "progressao-v2";
 const SHELL = [
   "./", "./index.html", "./css/style.css",
   "./js/data.js", "./js/app.js",
